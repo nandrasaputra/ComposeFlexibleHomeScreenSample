@@ -5,6 +5,7 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.material.darkColors
 import androidx.compose.material.lightColors
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.graphics.Color
 
 private val DarkColorPalette = darkColors(
     primary = Purple200,
@@ -13,9 +14,9 @@ private val DarkColorPalette = darkColors(
 )
 
 private val LightColorPalette = lightColors(
-    primary = Purple500,
-    primaryVariant = Purple700,
-    secondary = Teal200
+    primary = Color(0xFF338a94),
+    primaryVariant = Color(0xFF42A497),
+    secondary = Color(0xFFD33479)
 
     /* Other default colors to override
     background = Color.White,
@@ -32,7 +33,7 @@ fun FlexibleHomeScreenSampleTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
     content: @Composable() () -> Unit
 ) {
-    val colors = if (darkTheme) {
+    val colors = if (false /*Force Light Color Palete*/) {
         DarkColorPalette
     } else {
         LightColorPalette
